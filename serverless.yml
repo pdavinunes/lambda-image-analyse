@@ -8,5 +8,9 @@ provider:
   lambdaHashingVersion: 20201221
 
 functions:
-  hello:
-    handler: handler.hello
+  img-analysis:
+    handler: handler.main
+    events:
+      - httpApi:
+          path: /analyse
+          method: get
