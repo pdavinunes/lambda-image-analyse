@@ -63,7 +63,6 @@ class Handler {
   async main(event) {
     try {
       const { imageUrl } = event.queryStringParameters;
-      // const imgBuffer = await readFile("./images/cat.jpg");
       console.log("downloading image...");
       const buffer = await this.getImageBuffer(imageUrl);
       console.log("Detecting images...");
